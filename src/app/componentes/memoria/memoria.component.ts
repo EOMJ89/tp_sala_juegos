@@ -83,7 +83,7 @@ export class MemoriaComponent implements OnInit {
     }
     if (this.aciertos === this.countAciertos) {
       this.msgResultado = 'Juego terminado en ' + this.contIntentos + ' intento/s.';
-      console.log(this.msgResultado);
+      // console.log(this.msgResultado);
     }
     this.contIntentos++;
   }
