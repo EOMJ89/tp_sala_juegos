@@ -14,10 +14,10 @@
 
 .margin-bottom {
   margin-top: 0rem;
-  margin-bottom: 0.6rem;
 }
 
 .margin-sides {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.6rem;
 }
