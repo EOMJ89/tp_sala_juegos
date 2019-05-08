@@ -13,6 +13,8 @@ import { ResultadoComponent } from './componentes/resultado/resultado.component'
 import { MemoriaComponent } from './componentes/memoria/memoria.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,7 @@ import { MenuComponent } from './componentes/menu/menu.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule
   ],

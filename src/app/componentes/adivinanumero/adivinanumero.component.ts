@@ -30,6 +30,7 @@ export class AdivinanumeroComponent implements OnInit {
     this.msgResultado = '';
     this.esperando = true;
     this.valido = false;
+    this.contador = 0;
   }
 
   public VerificarNumero() {
