@@ -1,0 +1,46 @@
+<div class="pad-3">
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title center-horizontal">Piedra, Papel o Tijeras</h5>
+      <p class="card-text center-horizontal">Se le da a elegir una de tres opciones y se juega contra la máquina.</p>
+
+      <table class='col-12'>
+        <tbody>
+          <tr align="center">
+            <td colspan="3">
+              <p>{{msgJuego}}</p>
+              <p><img [src]="imagenMaquina" class="imgElegirMaquina"></p>
+            </td>
+          </tr>
+          <tr align="center">
+            <td>
+              <button (click)="Elegir(1)" class="botonInvisible"><img src="../../../assets/images/piedra.png"
+                  class="imgElegir"></button>
+              <!-- <button class="btn btn-primary" (click)="Elegir(1)">Piedra</button> -->
+            </td>
+            <td>
+              <button (click)="Elegir(2)" class="botonInvisible"><img src="../../../assets/images/papel.png"
+                  class="imgElegir"></button>
+              <!-- <button class="btn btn-primary" (click)="Elegir(2)">Papel</button> -->
+            </td>
+            <td>
+              <button (click)="Elegir(3)" class="botonInvisible"><img src="../../../assets/images/tijera.png"
+                  class="imgElegir"></button>
+              <!-- <button class="btn btn-primary" (click)="Elegir(3)">Tijera</button> -->
+            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="3">
+              <div style="margin-top: 1rem;">
+                <button class="btn btn-warning col-12" (click)="ReiniciarJuego()">Reiniciar</button>
+                <label class="col-12 intentos">Ha ganado {{contador}} vez/veces.</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-resultado [mensaje]=msgResultado [valido]=valido></app-resultado>

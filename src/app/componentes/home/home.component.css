@@ -1,0 +1,23 @@
+.card-middle {
+  text-align: center;
+}
+
+.icon-big {
+  align-self: center;
+  font-size: 10rem;
+}
+
+.card-bg {
+  background: aqua;
+  border-radius: 1rem;
+}
+
+.margin-bottom {
+  margin-top: 0rem;
+  margin-bottom: 0.6rem;
+}
+
+.margin-sides {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

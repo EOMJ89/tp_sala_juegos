@@ -1,0 +1,59 @@
+<div class="pad-3">
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title center-horizontal">Agilidad Aritmética</h5>
+      <p class="card-text center-vertical">Se le presenta una cuenta aritmética y tiene un tiempo determinado para contestar.</p>
+
+      <table class='col-12'>
+        <tbody>
+          <tr align="center">
+            <td>
+              <label class="col-12">Primer Operando</label>
+              <input class="col-3" type="number" disabled [value]=prOperando>
+            </td>
+          </tr>
+          <tr align="center">
+            <td>
+              <label class="col-12">Operación Aritmetica</label>
+              <input class="col-3" type="text" disabled [value]=operacion>
+            </td>
+          </tr>
+          <tr align="center">
+            <td>
+              <label class="col-12">Segundo Operando</label>
+              <input class="col-3" type="number" disabled [value]=sgOperando>
+            </td>
+          </tr>
+          <tr align="center">
+            <td>
+              <label class="col-12">Respuesta</label>
+              <input class="col-3" type="number" [(ngModel)]="respuesta">
+            </td>
+          </tr>
+          <tr align="center">
+            <td>
+              <div *ngIf="esperando == false" class="col-12">
+                <button class="btn btn-primary" (click)="NuevaOperacion()">Nuevo</button>
+              </div>
+              <div *ngIf="esperando == true" class="width-100">
+                <div class="col-12">
+                  <button class="btn btn-success" (click)="VerificarOperacion()">Verificar</button>
+                </div>
+                <div>
+                  <label class="intentos">Tiempo restante: {{tiempo}} segundo/s.</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr  align="center">
+            <td>
+              <label class="intentos">Ha ganado {{contador}} vez/veces.</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-resultado [mensaje]=msgResultado [valido]=valido></app-resultado>

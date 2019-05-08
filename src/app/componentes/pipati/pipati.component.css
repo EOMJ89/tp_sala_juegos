@@ -1,0 +1,15 @@
+.imgElegir {
+  height: 5rem;
+  width: auto;
+}
+
+.imgElegirMaquina {
+  height: 10rem;
+  width: auto;
+}
+
+.botonInvisible {
+  background: transparent;
+  border: none !important;
+  outline: none;
+}

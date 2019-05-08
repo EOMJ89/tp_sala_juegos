@@ -1,0 +1,41 @@
+<div class="pad-3">
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title center-horizontal">Adivina el número</h5>
+      <p class="card-text center-horizontal">Se le dá un numero secreto que debe adivinar en la menor cantidad de intentos posible.</p>
+
+      <table class='col-12'>
+        <tbody>
+          <tr>
+            <td align="left">
+              <label>Ingrese el número secreto</label>
+            </td>
+            <td>
+              <input class="col-12" type="number" [(ngModel)]="respuesta">
+            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="2">
+              <div *ngIf="esperando == false" class="col-12">
+                <button class="btn btn-primary" (click)="NuevoNumero()">Nuevo Número Secreto</button>
+              </div>
+              <div *ngIf="esperando == true" class="width-100">
+                <div class="col-12">
+                  <div class="flex-h intentos">
+                    <div class="animated infinite bounce slower">1&nbsp;</div>
+                    <div class="animated infinite bounce slower delay-2s">2&nbsp;</div>
+                    <div class="animated infinite bounce slower delay-3s">3&nbsp;</div>
+                    <div>Esperando...</div>
+                  </div>
+                  <button class="btn btn-success" (click)="VerificarNumero()">Verificar</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-resultado [mensaje]=msgResultado [valido]=valido></app-resultado>
